@@ -9,6 +9,8 @@
 
 This repository contains the evaluation code for the SAIL project, built upon [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark).
 
+Install by running `pip install clip-benchmark`
+
 ### How to Run Evaluation
 
 To evaluate SAIL models, simply run:
