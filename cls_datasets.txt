@@ -1,0 +1,9 @@
+wds/vtab/cifar10
+wds/vtab/cifar100
+wds/sun397
+wds/cars
+wds/fgvc_aircraft
+wds/vtab/dtd
+petswds/vtab/
+wds/vtab/caltech101
+wds/vtab/flowers
