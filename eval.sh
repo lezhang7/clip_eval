@@ -1,31 +1,19 @@
 #!/bin/bash
-#SBATCH --job-name=eval
-#SBATCH --partition=long                           # Ask for unkillable job
+#SBATCH --job-name=clip_eval
 #SBATCH --cpus-per-task=4                             # Ask for 2 CPUs
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:l40s:1
+#SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=1                                  # Ask for 1 GPU
-#SBATCH --mem=64G           
-#SBATCH --time=24:00:00                                    
-#SBATCH --output=./slurm_logs/eval/output-%j.txt
-#SBATCH --error=./slurm_logs/eval/error-%j.txt 
+#SBATCH --mem=128G           
+#SBATCH --time=1:00:00                                    
+#SBATCH --output=./slurm_logs/colxlip/job_output-%j.txt
+#SBATCH --error=./slurm_logs/colxlip/job_error-%j.txt 
 
 
 
-module load miniconda/3
-conda init
-conda activate aro
 
-# Evaluation on Classification tasks
-# python -m clip_benchmark.cli eval \
-#     --batch_size 64 \
-#     --model_type sail \
-#     --model dinov2b_nv2 \
-#     --pretrained $PRETRAINED \
-#     --task "zeroshot_classification"  \
-#     --dataset wds/food101 cifar10 cifar100 sun397 cars fgvc_aircraft dtd pets caltech101 flowers  \
-#     --dataset_root "clip_benchmark_datasets/{dataset}" \
-#     --output "{dataset}_sharelock_12m_{model}_{language}_{task}.json"
+source ~/.bashrc
+source ~/vlm/bin/activate
 
 
 # python -m clip_benchmark.cli eval \
@@ -43,7 +31,7 @@ python -m clip_benchmark.cli eval \
     --batch_size 64 \
     --model ViT-B-32 \
     --task=zeroshot_retrieval \
-    --pretrained laion400m_e32 \
+    --pretrained /home/z/zhangle7/links/scratch/colxlip/src/logs/vitb32-ft-baseline-bs256/checkpoints/epoch_5.pt \
     --dataset mscoco_captions flickr30k \
     --dataset_root "clip_benchmark_datasets/{dataset}" \
     --output "results/{task}/{dataset}/vitb32_dl3m_{model}.json"
