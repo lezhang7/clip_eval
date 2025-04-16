@@ -30,11 +30,11 @@ python -m clip_benchmark.cli eval \
 If you find our work useful, please consider citing:
 
 ```bibtex
-@inproceedings{zhang2025sail,
-  title={SAIL: Swift Alignment of Image and Language},
-  author={Zhang, Le and [Other Authors]},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2025}
+@article{zhang2024assessing,
+  title={Assessing and Learning Alignment of Unimodal Vision and Language Models},
+  author={Zhang, Le and Yang, Qian and Agrawal, Aishwarya},
+  journal={arXiv preprint arXiv:2412.04616},
+  year={2024}
 }
 ```
 
