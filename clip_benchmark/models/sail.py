@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/mila/l/le.zhang/scratch/SAIL")
+sys.path.append("$SCRATCH/SAIL")
 
 from typing import Optional, Union
 import torch

@@ -11,6 +11,8 @@ This repository contains the evaluation code for the SAIL project, built upon [C
 
 Install by running `pip install clip-benchmark`
 
+Update the path to SAIL project codebase in `clip_benchmark/models/sail.py` by replacing `$SCRATCH/SAIL` with the actual path to your SAIL project codebase.
+
 ### How to Run Evaluation
 
 To evaluate SAIL models, simply run:
