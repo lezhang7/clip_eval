@@ -32,6 +32,6 @@ python -m clip_benchmark.cli eval \
     --model ViT-B-32 \
     --task=zeroshot_retrieval \
     --pretrained /home/z/zhangle7/links/scratch/colxlip/src/logs/vitb32-ft-baseline-bs256/checkpoints/epoch_5.pt \
-    --dataset mscoco_captions flickr30k \
-    --dataset_root "clip_benchmark_datasets/{dataset}" \
+    --dataset flickr30k mscoco_captions  \
+    --dataset_root "/home/z/zhangle7/links/scratch/clip_eval/clip_benchmark_datasets/{dataset}" \
     --output "results/{task}/{dataset}/vitb32_dl3m_{model}.json"

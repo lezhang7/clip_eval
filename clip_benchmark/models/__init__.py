@@ -8,7 +8,6 @@ from .colxlip import load_colxlip
 TYPE2FUNC = {
     "open_clip": load_open_clip,
     "ja_clip": load_japanese_clip,
-    "sail": load_sail,
     "colxlip": load_colxlip
 }
 MODEL_TYPES = list(TYPE2FUNC.keys())
@@ -26,7 +25,7 @@ def load_clip(
     load_func = TYPE2FUNC[model_type]
     if model_type == "sail":
         from .sail import load_sail
-        return load_func(model_name=model_name, pretrained=pretrained, cache_dir=cache_dir, device=device, sharelock=sharelock)
+        return load_sail(model_name=model_name, pretrained=pretrained, cache_dir=cache_dir, device=device, sharelock=sharelock)
     else:
        
         return load_func(model_name=model_name, pretrained=pretrained, cache_dir=cache_dir, device=device)

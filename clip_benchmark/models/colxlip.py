@@ -6,7 +6,7 @@ from typing import Dict, List, Optional, Tuple, Union
 import open_clip
 
 import sys
-sys.path.append("/home/mila/l/le.zhang/scratch/colxlip/src/")
+sys.path.append("/home/z/zhangle7/links/scratch/colxlip/src")
 
 from colxlip.factory import create_model_and_transforms
 
